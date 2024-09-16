@@ -34,7 +34,7 @@ const Hero = () => {
             Celebrate the joy of Image creation using AI.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button onClick={() => router.push('/sign-in')} className="btn w-28 btn-primary">Sign In</button>
+              <button onClick={() => router.push("/sign-in")} className="btn w-28 btn-primary">Sign In</button>
             
             </div>
           </div>

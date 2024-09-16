@@ -46,7 +46,7 @@ import { useRouter } from 'next/navigation'
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button onClick={() => router.push('/sign-in')} className="btn btn-primary">Sign In</button>
+          <button onClick={() => router.push("/sign-in")} className="btn btn-primary">Sign In</button>
           <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />

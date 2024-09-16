@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation'
       <p className="text-white/60 hidden md:block">Fill Your Images With AI&apos;s Magic</p>
       <div className="inline-flex gap-1 items-center">
           <p>Get started for free</p>
-          <ArrowRight  onClick={() => router.push('/sign-in')} className="h-4 w-4 inline-flex justify-center items-center" />
+          <ArrowRight  onClick={() => router.push("/sign-in")} className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
 
@@ -28,7 +28,7 @@ import { useRouter } from 'next/navigation'
               <a href="">Coustmers</a>
               <a href="">Updates</a>
               <a href="">Help</a>
-              <button onClick={() => router.push('/sign-in')} className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
+              <button onClick={() => router.push("/sign-in")} className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
                 Sign In
               </button>
             </nav>
