@@ -153,3 +153,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* app/globals.css */
+.clerk-sign-in {
+  --clerk-primary-color: #6366f1;
+  --clerk-primary-color-hover: #4f46e5;
+  --clerk-primary-color-active: #4338ca;
+  --clerk-primary-color-disabled: #a5b4fc;
+  --clerk-background-color: #ffffff;
+  --clerk-text-color: #1f2937;
+  --clerk-border-radius: 0.375rem;
+}
+
+.clerk-sign-in .cl-card {
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.clerk-sign-in .cl-formButtonPrimary {
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.clerk-sign-in .cl-formButtonPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.clerk-sign-in .cl-footerActionLink {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.clerk-sign-in .cl-footerActionLink:hover {
+  text-decoration: underline;
+}

@@ -4,8 +4,10 @@ import starImage from "@/assets/star.png";
 import springImage from "@/assets/spring.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from 'next/navigation'
 
  const CallToAction = () => {
+  const router= useRouter();
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -44,7 +46,7 @@ import { useRef } from "react";
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Sign In</button>
+          <button onClick={() => router.push('/sign-in')} className="btn btn-primary">Sign In</button>
           <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />

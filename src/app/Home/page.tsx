@@ -1,8 +1,7 @@
 "use client";
-import React, { ReactElement, useState, useRef, useCallback } from "react";
+import React, { ReactElement, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CldImage } from "next-cloudinary";
-import html2canvas from "html2canvas";
 import {
   Card,
   CardContent,
@@ -26,7 +25,6 @@ import {
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [image, setImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>("");
   const [publicId, setPublicId] = useState<string>("");
   const [processedImages, setProcessedImages] = useState<Record<string, ReactElement | null>>({
@@ -43,7 +41,6 @@ export default function Home() {
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      setImage(file);
       const previewUrl = URL.createObjectURL(file);
       setImagePreview(previewUrl);
       const formData = new FormData();

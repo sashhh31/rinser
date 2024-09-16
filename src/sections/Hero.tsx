@@ -1,13 +1,14 @@
 "use client";
-import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from 'next/navigation'
+
 
 const Hero = () => {
+  const router = useRouter()
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -33,7 +34,7 @@ const Hero = () => {
             Celebrate the joy of Image creation using AI.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn w-28 btn-primary">Sign In</button>
+              <button onClick={() => router.push('/sign-in')} className="btn w-28 btn-primary">Sign In</button>
             
             </div>
           </div>
