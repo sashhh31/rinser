@@ -1,31 +1,11 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-// const ProtectedRoutes = createRouteMatcher([
-//     "/api/ImageUpload",
-//     "/Home"
-// ])
-
-// const PublicRoutes = createRouteMatcher([
-//     "/sign-in",
-//     "/sign-up",
-//     "/",
-// ])
 
 
-export default clerkMiddleware((auth,req)=>{
-    const {userId}= auth();
-    const Url= new URL(req.url);
-    //  const IsAccessingHome=Url.pathname==="/api/BlurFace"
-
-    //  if (userId && PublicRoutes(req) && !IsAccessingHome){
-    //     return NextResponse.redirect(new URL("/", req.url))
-    //  }
-
-    //  if (!userId && ProtectedRoutes(req)){
-    //     return NextResponse.redirect(new URL("/sign-up", req.url))
-
-    //  }
+export default clerkMiddleware(()=>{
+    
+  
 
      return NextResponse.next()
 
