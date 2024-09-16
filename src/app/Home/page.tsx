@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [image, setImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>("");
   const [publicId, setPublicId] = useState<string>("");
@@ -210,7 +210,7 @@ export default function Home() {
             className="rounded-full"
           >
             {isDarkMode ? (
-              <Sun className="h-[1.2rem] w-[1.2rem]" />
+              <Sun className="h-[1.2rem] w-[1.2rem] dark:text-gray-100" />
             ) : (
               <Moon className="h-[1.2rem] w-[1.2rem]" />
             )}
@@ -318,13 +318,13 @@ export default function Home() {
                     </div>
                   </div>
                   <Button
-                    className="w-full mt-4 dark:bg-gray-400"
+                    className="w-full mt-4 dark:bg-gray-200"
                     onClick={() => applyTransformation(feature.name)}
                   >
                     Apply {feature.name}
                   </Button>
                   <Button
-                    className="w-full mt-4"
+                    className="w-full mt-4 dark:bg-gray-200"
                     onClick={ handleDownload}
                     disabled={!processedImages[feature.name]}
                   >

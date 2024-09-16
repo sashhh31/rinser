@@ -21,6 +21,7 @@ export default function RootLayout({
     <ClerkProvider>
 
 <html lang="en" className="relative">
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
 <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>{children}</body>
 </html>
     </ClerkProvider>
