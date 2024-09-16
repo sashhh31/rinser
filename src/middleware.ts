@@ -1,10 +1,19 @@
+'use server'
+ 
+import { redirect } from 'next/navigation'
+import { revalidatePath } from 'next/cache'
 import { clerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 
 
-export default clerkMiddleware(()=>{
-    
+export default clerkMiddleware((auth)=>{
+    const {userId}= auth();
+
+    if (userId){
+      revalidatePath('/Home') // Update cached posts
+  redirect(`/Home`)
+    }
   
 
      return NextResponse.next()
