@@ -23,7 +23,7 @@ import {
   Moon,
 } from "lucide-react";
 
-export default function home() {
+export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [imagePreview, setImagePreview] = useState<string>("");
   const [publicId, setPublicId] = useState<string>("");
