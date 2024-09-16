@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
         .upload(base64Image,{
           asset_folder: 'ImageStore',
           resource_type: 'image'})          
-          return NextResponse.json({ publicId: result.public_id }, { status: 200 });
+          return NextResponse.json({ publicId: result.public_id , url:result.secure_url}, { status: 200 });
    
     
 
